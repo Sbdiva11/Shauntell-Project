@@ -32,20 +32,81 @@
             </div>
         </section>
 
-        <section id="featured-work">
-            <h2>Contact</h2>
-            
-            <div class="work-grid">
-                <article class="project-card">
+<section id="contact">
+    <h2>Get in Touch</h2>
+    <p>Have a question or want to collaborate on a web project? Send me a message below!</p>
+    <article class="project-card">
                     <h3>Contact Details</h3>
-                    <p>Get in touch or learn more about my background:</p>
                     <ul class="project-highlights">
                         <li> Email: jackson.shauntell@yahoo.com</li>
                         <li> LinkedIn: <a href="https://www.linkedin.com/in/shauntell-jackson-782828403/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Btrfv1z7YRXmgrI5qteqDBg%3D%3D" target="_blank" rel="noopener noreferrer">Shauntell Jackson</a></li>
                     </ul>
                 </article>
+
+    <form action="#" method="POST" class="contact-form" novalidate>
+        
+        <div class="form-group">
+            <label for="user-name">Full Name <span class="required-asterisk" aria-hidden="true">*</span></label>
+            <input 
+                id="user-name" 
+                name="name" 
+                required 
+                aria-required="true" 
+                autocomplete="name"
+                placeholder="e.g., Shauntell Jackson">
+        </div>
+
+        <div class="form-group is-invalid">
+            <label for="user-email">Email Address <span class="required-asterisk" aria-hidden="true">*</span></label>
+            <input 
+                type="email" 
+                id="user-email" 
+                name="email" 
+                required 
+                aria-required="true"
+                aria-invalid="true" 
+                aria-describedby="email-error-msg"
+                autocomplete="email"
+                placeholder="e.g., name@example.com">
+            
+                <span id="email-error-msg" class="error-message" role="alert">
+                <span class="error-icon" aria-hidden="true">⚠️</span> Please enter a valid email address (e.g., name@example.com).
+            </span>
+        </div>
+
+        <fieldset class="form-fieldset">
+            <legend>Reason for Reaching Out <span class="required-asterisk" aria-hidden="true">*</span></legend>
+            
+            <div class="radio-group">
+                <div class="radio-option">
+                    <input type="radio" id="reason-project" name="contact-reason" value="project" checked>
+                    <label for="reason-project">Project Collaboration</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="reason-question" name="contact-reason" value="question">
+                    <label for="reason-question">General Question</label>
+                </div>
+                <div class="radio-option">
+                    <input type="radio" id="reason-other" name="contact-reason" value="other">
+                    <label for="reason-other">Other</label>
+                </div>
             </div>
-        </section>
+        </fieldset>
+
+        <div class="form-group">
+            <label for="user-message">Message <span class="required-asterisk" aria-hidden="true">*</span></label>
+            <textarea 
+                id="user-message" 
+                name="message" 
+                rows="5" 
+                required 
+                aria-required="true" 
+                placeholder="Type your message here..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+</section>
     </main>
 
     <footer>
